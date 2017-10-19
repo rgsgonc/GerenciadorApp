@@ -25,7 +25,7 @@ public class UsuarioController {
 		s.cadastrarUsuario(usuario);
 		return "Usuario salvo com sucesso";
 	}
-	
+	d
 	@GET
 	@Path("/listarUsuario")
 	@Produces(MediaType.APPLICATION_JSON)
