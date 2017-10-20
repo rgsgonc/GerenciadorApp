@@ -11,64 +11,62 @@
 |POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro| ✔ | ✔
 |GET|Cadastro Categoria|curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/listarCategorias| ✔ | ✔
 
-## CADASTRO RECEITA
+## CADASTRO DE RECEITA
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro de Receita|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/cadastro| ✔
-|GET|Cadastro de Receita|curl http://localhost:8080/GerenciadorFinanceiro/rest/receita/listarReceitas| ✖
+|POST|Cadastro de Receita|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/cadastro| ✔ | ✔
+|GET|Cadastro de Receita|curl http://localhost:8080/GerenciadorFinanceiro/rest/receita/listarReceitas| ✔ | ✖
 
-## CADASTRO DESPESA
+## CADASTRO DE DESPESA
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro de Despesa|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/cadastro| ✔
-|GET|Cadastro de Despesa|curl http://localhost:8080/GerenciadorFinanceiro/rest/despesa/listarDespesas| ✔
+|POST|Cadastro de Despesa|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/cadastro| ✔ | ✖
+|GET|Cadastro de Despesa|curl http://localhost:8080/GerenciadorFinanceiro/rest/despesa/listarDespesas| ✔ | ✖
 
+## CADASTRO DE CARTÃO
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Cartão|curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "numero":"12345678","dataValidade":"18/09/2017","codigoSeguranca":"321","nomeTitular":"Rafael Santos"}' http://localhost:8080/GerenciadorFinanceiro/rest/cartao/cadastro| ✔ | ✖
+|GET|Cadastro de Cartão|curl http://localhost:8080/GerenciadorFinanceiro/rest/cartao/listarCartoes| ✔ | ✖
 
-
-
-
-
-
-
-
-
-
-# CURL (Cadastro de Cartão)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "numero":"12345678","dataValidade":"18/09/2017","codigoSeguranca":"321","nomeTitular":"Rafael Santos"}' http://localhost:8080/GerenciadorFinanceiro/rest/cartao/cadastro
-
-► GET: curl http://localhost:8080/GerenciadorFinanceiro/rest/cartao/listarCartoes
-
-# CURL (Cadastro de Usuário)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nome":"rafa", "endereco":"rua praca XV", "email":"rgs.gonc@gmail.com", "telefone":"99151767", "senha":"123456", "confirmaSenha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/usuario/cadastro
-
-► GET: curl http://localhost:8080/GerenciadorFinanceiro/rest/usuario/listarUsuario 
+## CADASTRO DE USUÁRIO
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Usuário|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nome":"rafa", "endereco":"rua praca XV", "email":"rgs.gonc@gmail.com", "telefone":"99151767", "senha":"123456", "confirmaSenha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/usuario/cadastro| ✔ | ✔
+|GET|Cadastro de Usuário|curl http://localhost:8080/GerenciadorFinanceiro/rest/usuario/listarUsuario| ✖ | ✔
 
 # TOMCAT RAFAEL
+## LOGIN
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Login|curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://35.199.24.34/GerenciadorFinanceiro/rest/login/autenticacao| ✔ | ✔ 
 
-CURL (Login)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/login/autenticacao
+## CADASTRO CATEGORIA
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://35.199.24.34/GerenciadorFinanceiro/rest/categoria/cadastro| ✔ | ✔
+|GET|Cadastro Categoria|curl http://35.199.24.34/GerenciadorFinanceiro/rest/categoria/listarCategorias| ✔ | ✔
 
-# CURL (Cadastro Categoria)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/categoria/cadastro
+## CADASTRO DE RECEITA
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Receita|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://35.199.24.34/GerenciadorFinanceiro/rest/receita/cadastro| ✔ | ✔
+|GET|Cadastro de Receita|curl http://35.199.24.34/GerenciadorFinanceiro/rest/receita/listarReceitas| ✔ | ✖
 
-► GET: curl http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/categoria/listarCategorias
+## CADASTRO DE DESPESA
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Despesa|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://35.199.24.34/GerenciadorFinanceiro/rest/despesa/cadastro| ✔ | ✖
+|GET|Cadastro de Despesa|curl http://35.199.24.34/GerenciadorFinanceiro/rest/despesa/listarDespesas| ✔ | ✖
 
-# CURL (Cadastro de Receita)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/receita/cadastro
+## CADASTRO DE CARTÃO
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Cartão|curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "numero":"12345678","dataValidade":"18/09/2017","codigoSeguranca":"321","nomeTitular":"Rafael Santos"}' http://35.199.24.34/GerenciadorFinanceiro/rest/cartao/cadastro| ✔ | ✖
+|GET|Cadastro de Cartão|curl http://35.199.24.34/GerenciadorFinanceiro/rest/cartao/listarCartoes| ✔ | ✖
 
-► GET: curl http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/receita/listarReceitas
-
-# CURL (Cadastro de Despesa)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/despesa/cadastro
-
-► GET: curl http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/despesa/listarDespesas
-
-# CURL (Cadastro de Cartão)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "numero":"12345678","dataValidade":"18/09/2017","codigoSeguranca":"321","nomeTitular":"Rafael Santos"}' http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/cartao/cadastro
-
-► GET: curl http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/cartao/listarCartoes
-
-# CURL (Cadastro de Usuário)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nome":"rafa", "endereco":"rua praca XV", "email":"rgs.gonc@gmail.com", "telefone":"99151767", "senha":"123456", "confirmaSenha":"123456"}' http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/usuario/cadastro
-
-► GET: curl http://35.199.24.34/GerenciadorFinanceiroRafaelGuilherme/rest/usuario/listarUsuario 
+## CADASTRO DE USUÁRIO
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Usuário|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nome":"rafa", "endereco":"rua praca XV", "email":"rgs.gonc@gmail.com", "telefone":"99151767", "senha":"123456", "confirmaSenha":"123456"}' http://35.199.24.34/GerenciadorFinanceiro/rest/usuario/cadastro| ✔ | ✔
+|GET|Cadastro de Usuário|curl http://35.199.24.34/GerenciadorFinanceiro/rest/usuario/listarUsuario| ✖ | ✔
