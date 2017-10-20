@@ -1,36 +1,37 @@
 # LOCALHOST
 
 ## LOGIN
-|Método |Tela| CURL | Testado
-|------ |------ | ------ | ------ |
-|POST|Login|curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/login/autenticacao| OK
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Login|curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/login/autenticacao| ✔ | ✔ 
 
 ## CADASTRO CATEGORIA
-|Método |Tela| CURL | Testado
-|------ |------ | ------ | ------ |
-|POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro| OK
-|GET|Cadastro Categoria|curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/listarCategorias| OK
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro| ✔ | ✔
+|GET|Cadastro Categoria|curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/listarCategorias| ✔ | ✔
 
----------------------
-# LOCALHOST
+## CADASTRO RECEITA
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Receita|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/cadastro| ✔
+|GET|Cadastro de Receita|curl http://localhost:8080/GerenciadorFinanceiro/rest/receita/listarReceitas| ✖
 
-CURL (Login)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/login/autenticacao
+## CADASTRO DESPESA
+|Método |Tela| CURL | Testado | Tela Android
+|------ |------ | ------ | ------ | ------ |
+|POST|Cadastro de Despesa|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/cadastro| ✔
+|GET|Cadastro de Despesa|curl http://localhost:8080/GerenciadorFinanceiro/rest/despesa/listarDespesas| ✔
 
-# CURL (Cadastro Categoria)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro
 
-► GET: curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/listarCategorias
 
-# CURL (Cadastro de Receita)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/cadastro
 
-► GET: curl http://localhost:8080/GerenciadorFinanceiro/rest/receita/listarReceitas
 
-# CURL (Cadastro de Despesa)
-► POST: curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/cadastro
 
-► GET: curl http://localhost:8080/GerenciadorFinanceiro/rest/despesa/listarDespesas
+
+
+
+
 
 # CURL (Cadastro de Cartão)
 ► POST: curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "numero":"12345678","dataValidade":"18/09/2017","codigoSeguranca":"321","nomeTitular":"Rafael Santos"}' http://localhost:8080/GerenciadorFinanceiro/rest/cartao/cadastro
