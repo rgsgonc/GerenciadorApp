@@ -1,7 +1,16 @@
-## LOCAL HOST
+## LOCALHOST
+
+# LOGIN
 |Método |Tela| CURL | Testado
 |------ |------ | ------ | ------ |
 |POST|Login|curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/login/autenticacao| OK
+
+# CADASTRO CATEGORIA
+|Método |Tela| CURL | Testado
+|------ |------ | ------ | ------ |
+|POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro| OK
+|GET|Cadastro Categoria|curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/listarCategorias| OK
+
 ---------------------
 # LOCALHOST
 
