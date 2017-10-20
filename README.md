@@ -1,3 +1,8 @@
+## LOCAL HOST
+|Método |Tela| CURL | Testado
+|------ |------ | ------ | ------ |
+|POST|Login|curl -H "Content-Type: application/json" -X POST -d '{"usuario":"rafael","senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/login/autenticacao| OK
+---------------------
 # LOCALHOST
 
 CURL (Login)
