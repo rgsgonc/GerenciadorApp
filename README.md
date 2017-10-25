@@ -8,8 +8,10 @@
 ## CADASTRO CATEGORIA
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro| ✔ | ✔
-|GET|Cadastro Categoria|curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/listarCategorias| ✔ | ✔
+|POST|Cadastro Categoria|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nomeCategoria":"Alimentacao"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/cadastro| ✔ | ✔
+|GET|Cadastro Categoria|curl http://localhost:8080/GerenciadorFinanceiro/rest/categoria/buscar/1| ✔ | ✔
+|PUT|Cadastro Categoria|curl -X PUT -H "Content-Type: application/json" -d '{"id":"1","nomeCategoria":"Gasolina"}' http://localhost:8080/GerenciadorFinanceiro/rest/categoria/editar| ✔ | ✔
+|DELETE|Cadastro Categoria|curl -X DELETE http://localhost:8080/GerenciadorFinanceiro/rest/categoria/delete/1| ✔ | ✔
 
 ## CADASTRO DE RECEITA
 |Método |Tela| CURL | Testado | Tela Android
