@@ -16,8 +16,10 @@
 ## CADASTRO DE RECEITA
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro de Receita|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/09/2017","descricao":"balada com amigos", "valor":"150,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/cadastro| ✔ | ✔
-|GET|Cadastro de Receita|curl http://localhost:8080/GerenciadorFinanceiro/rest/receita/listarReceitas| ✔ | ✖
+|POST|Cadastro de Receita|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","data":"01/12/2017","descricao":"desenv software","valor":"3500"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/cadastro| ✔ | ✔
+|GET|Cadastro de Receita|curl http://localhost:8080/GerenciadorFinanceiro/rest/receita/buscar/1| ✔ | ✔
+|PUT|Cadastro de Receita|curl -X PUT -H "Content-Type: application/json" -d '{"id":"1","data":"01/12/2017","descricao":"desenv software","valor":"6500"}' http://localhost:8080/GerenciadorFinanceiro/rest/receita/editar| ✔ | ✔
+|DELETE|Cadastro de Receita|curl -X DELETE http://localhost:8080/GerenciadorFinanceiro/rest/receita/delete/1| ✔ | ✔
 
 ## CADASTRO DE DESPESA
 |Método |Tela| CURL | Testado | Tela Android
