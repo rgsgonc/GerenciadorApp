@@ -26,8 +26,10 @@
 ## CADASTRO DE CARTÃO
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro de Cartão|curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "numero":"12345678","dataValidade":"18/09/2017","codigoSeguranca":"321","nomeTitular":"Rafael Santos"}' http://localhost:8080/GerenciadorFinanceiro/rest/cartao/cadastro| ✔ | ✖
-|GET|Cadastro de Cartão|curl http://localhost:8080/GerenciadorFinanceiro/rest/cartao/listarCartoes| ✔ | ✖
+|POST|Cadastro de Cartão|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","numero":"123456", "dataValidade":"10/2020", "codigoSeguranca":"123", "nomeTitular":"Rafael Santos"}' http://localhost:8080/GerenciadorFinanceiro/rest/cartao/cadastro| ✔ | ✔
+|GET|Cadastro de Cartão|curl http://localhost:8080/GerenciadorFinanceiro/rest/cartao/buscar/1| ✔ | ✔
+|PUT|Cadastro de Cartão|curl -X PUT -H "Content-Type: application/json" -d '{"id":"1","numero":"55555", "dataValidade":"10/2020", "codigoSeguranca":"123", "nomeTitular":"Rafael Santos"}' http://localhost:8080/GerenciadorFinanceiro/rest/cartao/editar| ✔ | ✔
+|DELETE|Cadastro de Cartão|curl -X DELETE http://localhost:8080/GerenciadorFinanceiro/rest/cartao/delete/1| ✔ | ✔
 
 ## CADASTRO DE USUÁRIO
 |Método |Tela| CURL | Testado | Tela Android
