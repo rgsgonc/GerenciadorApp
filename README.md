@@ -24,8 +24,10 @@
 ## CADASTRO DE DESPESA
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro de Despesa|curl -H "Content-Type: application/json" -X POST -d '{"data":"15/10/2017","descricao":"mecanico", "valor":"350,00"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/cadastro| ✔ | ✖
-|GET|Cadastro de Despesa|curl http://localhost:8080/GerenciadorFinanceiro/rest/despesa/listarDespesas| ✔ | ✖
+|POST|Cadastro de Despesa|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","data":"01/12/2017","descricao":"desenv software","valor":"3500"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/cadastro| ✔ | ✔
+|GET|Cadastro de Despesa|curl http://localhost:8080/GerenciadorFinanceiro/rest/despesa/buscar/1| ✔ | ✔
+|PUT|Cadastro de Despesa|curl -X PUT -H "Content-Type: application/json" -d '{"id":"1","data":"01/12/2017","descricao":"desenv software","valor":"6500"}' http://localhost:8080/GerenciadorFinanceiro/rest/despesa/editar| ✔ | ✔
+|DELETE|Cadastro de Despesa|curl -X DELETE http://localhost:8080/GerenciadorFinanceiro/rest/despesa/delete/1| ✔ | ✔
 
 ## CADASTRO DE CARTÃO
 |Método |Tela| CURL | Testado | Tela Android
