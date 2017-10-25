@@ -32,8 +32,10 @@
 ## CADASTRO DE USUÁRIO
 |Método |Tela| CURL | Testado | Tela Android
 |------ |------ | ------ | ------ | ------ |
-|POST|Cadastro de Usuário|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nome":"rafa", "endereco":"rua praca XV", "email":"rgs.gonc@gmail.com", "telefone":"99151767", "senha":"123456", "confirmaSenha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/usuario/cadastro| ✔ | ✔
-|GET|Cadastro de Usuário|curl http://localhost:8080/GerenciadorFinanceiro/rest/usuario/listarUsuario| ✖ | ✔
+|POST|Cadastro de Usuário|curl -H "Content-Type: application/json" -X POST -d '{"id":"1","nome":"rafael", "endereco":"rua praca XV", "email":"rgs.gornc@gmail.com", "telefone":"99151767", "senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/usuario/cadastro| ✔ | ✔
+|GET|Cadastro de Usuário|curl http://localhost:8080/GerenciadorFinanceiro/rest/usuario/buscar/1| ✔ | ✔
+|PUT|Cadastro de Usuário|curl -X PUT -H "Content-Type: application/json" -d '{"id":"1","nome":"agora eh maria", "endereco":"rua praca XV", "email":"rgs.gornc@gmail.com", "telefone":"99151767", "senha":"123456"}' http://localhost:8080/GerenciadorFinanceiro/rest/usuario/editar| ✔ | ✔
+|DELETE|Cadastro de Usuário|curl -X DELETE http://localhost:8080/GerenciadorFinanceiro/rest/usuario/delete/1| ✔ | ✔
 
 # TOMCAT RAFAEL
 ## LOGIN
